@@ -1,7 +1,7 @@
-flask
-torch
-torchvision
+flask==3.0.3
+torch==2.1.2+cpu
+torchvision==0.16.2+cpu
 pillow
-numpy
+numpy<2
 opencv-python-headless
 gdown
