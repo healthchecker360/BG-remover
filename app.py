@@ -11,7 +11,9 @@ from model.u2net import U2NET
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "static/uploads"
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+if not os.path.isdir(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+
 
 MODEL_PATH = "u2net.pth"
 MODEL_URL = "https://huggingface.co/xuebinqin/U-2-Net/resolve/main/u2net.pth"
